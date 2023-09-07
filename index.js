@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const { Triangle, Square, Circle } = require("./lib/shapes");
+const { Triangle, Square, Circle } = require("./lib/shapes.js");
 
 
 // Array of questions for user input
@@ -30,13 +30,13 @@ const init = () => {
     name: 'shape-color',
     message: 'Please enter a shape color.',
 },
-])}.then((answers) => {
+])}.then(answers) => {
     const svg = generateLogo(answers);
 
     const fileName = './examples/logo.svg';
     fs.writeFile(fileName, svg, (err) => {
         err ? console.log(err) : console.log(`Generated logo.svg`);
     })
-});
+};
 
 init();
