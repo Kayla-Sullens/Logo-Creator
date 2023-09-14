@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const { Triangle, Square, Circle } = require('./lib/shapes.js');
-//const generateLogo = require('./examples')
+const generateLogo = require('./lib/genSVG.js')
 
 // Array of questions for user input
 const init = () => {
