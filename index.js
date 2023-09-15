@@ -34,6 +34,7 @@ const init = () => {
         const svg = generateLogo(answers);
 
         const fileName = './examples/logo.svg';
+        console.log(svg);
         fs.writeFile(fileName, svg, (err) => {
             err ? console.log(err) : console.log(`Generated logo.svg`);
         })
